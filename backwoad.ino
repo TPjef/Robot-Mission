@@ -1,0 +1,77 @@
+void backwoad() {
+  analogWrite(PWM1, speed1);
+  digitalWrite(RM1, LOW);
+  digitalWrite(RM2, HIGH);
+
+  analogWrite(PWM2, speed2);
+  digitalWrite(LM1, LOW);
+  digitalWrite(LM2, HIGH);
+}
+
+void right() {
+  analogWrite(PWM1,speed1);
+  digitalWrite(RM1,LOW);
+  digitalWrite(RM2,HIGH);
+  analogWrite(PWM2,speed2);
+  digitalWrite(LM1,LOW);
+  digitalWrite(LM2,HIGH);
+  delay(1000);    //ถอย 1 วินาที
+
+  analogWrite(PWM1, speed1);
+  digitalWrite(RM1, LOW);
+  digitalWrite(RM2, HIGH); 
+
+  analogWrite(PWM2, speed2);
+  digitalWrite(LM1, HIGH);
+  digitalWrite(LM2, LOW); 
+  delay(430);   //เลี้ยว 0.43 วินาที
+
+}
+
+void left() {
+  analogWrite(PWM1,speed1);
+  digitalWrite(RM1,LOW);
+  digitalWrite(RM2,HIGH);
+  analogWrite(PWM2,speed2);
+  digitalWrite(LM1,LOW);
+  digitalWrite(LM2,HIGH);
+  delay(1000);    //ถอย 1 วินาที
+
+  analogWrite(PWM1, speed1);
+  digitalWrite(RM1, HIGH);
+  digitalWrite(RM2, LOW); 
+
+  analogWrite(PWM2, speed2);
+  digitalWrite(LM1, LOW);
+  digitalWrite(LM2, HIGH); 
+  delay(430);   //เลี้ยว 0.43 วินาที
+}
+
+void spin() {
+  analogWrite(PWM1,speed1);
+  digitalWrite(RM1,LOW);
+  digitalWrite(RM2,HIGH);
+  analogWrite(PWM2,speed2);
+  digitalWrite(LM1,LOW);
+  digitalWrite(LM2,HIGH);
+  delay(1000);    //ถอย 1 วินาที
+
+  analogWrite(PWM1, speed1);
+  digitalWrite(RM1, HIGH);
+  digitalWrite(RM2, LOW); 
+
+  analogWrite(PWM2, speed2);
+  digitalWrite(LM1, LOW);
+  digitalWrite(LM2, HIGH); 
+  delay(860);   //เลี้ยว 0.86 วินาที
+}
+
+void stopMotor() {
+  analogWrite(PWM1, 0);
+  analogWrite(PWM2, 0);
+
+  digitalWrite(RM1, LOW);
+  digitalWrite(RM2, LOW);
+  digitalWrite(LM1, LOW);
+  digitalWrite(LM2, LOW);
+}
