@@ -68,3 +68,34 @@ void stopMotor() {
   digitalWrite(LM1, LOW);
   digitalWrite(LM2, LOW);
 }
+
+//Sensor หลัง(กันตก)
+
+void rightSlow() {
+  digitalWrite(LM1, HIGH);
+  digitalWrite(LM2, LOW);
+  analogWrite(PWM2, 80);
+
+  digitalWrite(RM1, LOW);
+  digitalWrite(RM2, HIGH);
+  analogWrite(PWM1, 80);
+}
+
+void leftSlow() {
+  digitalWrite(LM1, LOW);
+  digitalWrite(LM2, HIGH);
+  analogWrite(PWM2, 80);
+
+  digitalWrite(RM1, HIGH);
+  digitalWrite(RM2, LOW);
+  analogWrite(PWM1, 80);
+}
+
+void backSlow() {
+  digitalWrite(LM1, LOW);
+  digitalWrite(LM2, HIGH);
+  digitalWrite(RM1, LOW);
+  digitalWrite(RM2, HIGH);
+  analogWrite(PWM1, 90);
+  analogWrite(PWM2, 90);
+}
