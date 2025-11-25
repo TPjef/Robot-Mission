@@ -1,6 +1,3 @@
-// -----------------------------
-// กำหนดขาใช้งาน
-// -----------------------------
 int LS = 2;
 int RS = 3;
 
@@ -13,8 +10,8 @@ int LM1  = 4;
 int LM2  = 5;
 
 
-int speed1 = 110;   // ซ้าย
-int speed2 = 127;   // ขวา
+int speed1 = 147;   // ซ้าย
+int speed2 = 140;   // ขวา
 
 int state = 0;
 unsigned long timer = 0;
