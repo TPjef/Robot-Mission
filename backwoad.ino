@@ -16,7 +16,7 @@ void right() {
   analogWrite(PWM2, speed2);  
   digitalWrite(LM1, LOW);
   digitalWrite(LM2, HIGH);
-  delay(1000);
+  delay(500);
 
   analogWrite(PWM1, speed1);
   digitalWrite(RM1, LOW);    
@@ -25,7 +25,7 @@ void right() {
   analogWrite(PWM2, speed2);
   digitalWrite(LM1, HIGH);  
   digitalWrite(LM2, LOW);
-  delay(430);
+  delay(370);
 }
 
 void left() {
@@ -37,7 +37,7 @@ void left() {
   analogWrite(PWM2, speed2);
   digitalWrite(LM1, LOW);  
   digitalWrite(LM2, HIGH);
-  delay(1000);
+  delay(500);
 
   analogWrite(PWM1, speed1);
   digitalWrite(RM1, HIGH);  
@@ -46,7 +46,7 @@ void left() {
   analogWrite(PWM2, speed2);
   digitalWrite(LM1, LOW);   
   digitalWrite(LM2, HIGH);
-  delay(430);
+  delay(370);
 }
 
 void spin() {
