@@ -1,8 +1,7 @@
 int LS = 2;     // หน้า ซ้าย
 int RS = 3;     // หน้า ขวา
-
-int BL = 12;    // หลัง ซ้าย
-int BR = 13;    // หลัง ขวา
+int BL = 8;     // ริมซ้าย
+int BR = 9;     // ริมขวา
 
 int PWM1 = 10; // มอเตอร์ขวา
 int RM1  = 6;
@@ -12,8 +11,8 @@ int PWM2 = 11; // มอเตอร์ซ้าย
 int LM1  = 4;
 int LM2  = 5;
 
-int speed1 = 147;   // ซ้าย
-int speed2 = 140;   // ขวา
+int speed1 = 90;   // ซ้าย
+int speed2 = 85;   // ขวา
 
 int state = 0;
 unsigned long timer = 0;
@@ -42,22 +41,8 @@ void loop() {
   int bl = digitalRead(BL);
   int br = digitalRead(BR);
 
-  if (bl && !br) {                 // หลังซ้ายเจอเส้น
-    rightSlow();                  // ค่อยๆ เลี้ยวขวา
-    return;
-  }
-
-  if (br && !bl) {                 // หลังขวาเจอเส้น
-    leftSlow();                   // ค่อยๆ เลี้ยวซ้าย
-    return;
-  }
-
-  if (bl && br) {                  // หลังทั้ง 2 เจอเส้น
-    backSlow();                   // ถอยกลับเบาๆ
-    delay(300);
-    stopMotor();
-    return;
-  }
+  right2();
+  left2();
 
   switch (state) {
 
