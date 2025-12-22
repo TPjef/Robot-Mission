@@ -16,7 +16,7 @@ void right() {
   analogWrite(PWM2, speed2);  
   digitalWrite(LM1, LOW);
   digitalWrite(LM2, HIGH);
-  delay(600);
+  delay(350);
 
   analogWrite(PWM1, speed1);
   digitalWrite(RM1, LOW);    
@@ -25,7 +25,7 @@ void right() {
   analogWrite(PWM2, speed2);
   digitalWrite(LM1, HIGH);  
   digitalWrite(LM2, LOW);
-  delay(500);
+  delay(450);
 }
 
 void left() {
@@ -37,7 +37,7 @@ void left() {
   analogWrite(PWM2, speed2);
   digitalWrite(LM1, LOW);  
   digitalWrite(LM2, HIGH);
-  delay(600);
+  delay(350);
 
   analogWrite(PWM1, speed1);
   digitalWrite(RM1, HIGH);  
@@ -46,7 +46,7 @@ void left() {
   analogWrite(PWM2, speed2);
   digitalWrite(LM1, LOW);   
   digitalWrite(LM2, HIGH);
-  delay(500);
+  delay(450);
 }
 
 void spin() {
@@ -60,8 +60,8 @@ void spin() {
 }
 
 void stopMotor() {
-  analogWrite(PWM1, 0);
-  analogWrite(PWM2, 0);
+  analogWrite(PWM1, 20);
+  analogWrite(PWM2, 20);
 
   digitalWrite(RM1, LOW);
   digitalWrite(RM2, LOW);
