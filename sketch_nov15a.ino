@@ -11,8 +11,8 @@ int PWM2 = 11; // มอเตอร์ซ้าย
 int LM1  = 4;
 int LM2  = 5;
 
-int speed1 = 90;   // ซ้าย
-int speed2 = 85;   // ขวา
+int speed1 = 85;   // ซ้าย
+int speed2 = 105;   // ขวา
 
 int state = 0;
 unsigned long timer = 0;
